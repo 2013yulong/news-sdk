@@ -1,12 +1,529 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="/themes/vue.css">
-</head>
-<body class="">
-  <div id="app"></div>
-</body>
-<script src="/lib/docsify.js" data-repo="qingwei-li/docsify" data-auto2top data-sidebar-toggle data-router></script>
+<html lang="zh-hans">
+ <head> 
+  <meta charset="UTF-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <title>newssdk-ui</title> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <meta name="description" content="newssdk-ui" /> 
+  <meta name="generator" content="GitBook 2.6.7" /> 
+  <meta name="HandheldFriendly" content="true" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png" /> 
+  <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon" /> 
+  <link rel="stylesheet" href="gitbook/style.css" /> 
+  <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-disqus/plugin.css" /> 
+  <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-highlight/website.css" /> 
+  <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-search/search.css" /> 
+  <link rel="stylesheet" href="gitbook/plugins/gitbook-plugin-fontsettings/website.css" /> 
+  <!--     <link rel="next" href="./newssdk-ui/index.html" />
+ --> 
+ </head> 
+ <body> 
+  <div class="book" data-level="0" data-chapter-title="介绍" data-filepath="README.md" data-basepath="." data-revision="Thu Jan 05 2017 15:10:30 GMT+0800 (CST)" data-innerlanguage=""> 
+   <div class="book-header" role="navigation"> 
+    <!-- Actions Left --> 
+    <!-- Title --> 
+    <h1> <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./">教你使用 newssdk-UI</a> </h1> 
+   </div> 
+   <div class="book-summary"> 
+    <nav role="navigation"> 
+     <ul class="summary"> 
+      <li class="chapter active" data-level="0" data-path="index.html"> <a href="./index.html"> <i class="fa fa-check"></i> 目 录 </a> </li> 
+      <li class="chapter " data-level="1" data-path="newssdk-ui/index.html"> <a href="#1-整体规则"> <i class="fa fa-check"></i> 1 整体规则 </a> </li> 
+      <li> 
+       <ul class="children">
+        <li><a class="section-link" href="#11-常用class命名定义">1.1 常用class命名定义</a></li>
+        <li><a class="section-link" href="#12--mixin意义">1.2 Mixin意义</a></li>
+        <li><a class="section-link" href="#13--variables">1.3 Variables</a></li>
+       </ul> </li> 
+      <li class="chapter " data-level="1" data-path="newssdk-ui/index.html"> <a href="#2-1px问题"> <i class="fa fa-check"></i> 2 1px问题 </a> </li> 
+      <li>
+       <ul class="children">
+        <li><a class="section-link" href="#21-使用演示">2.1 使用演示</a></li>
+        <li><a class="section-link" href="#22-使用方式">2.2 使用方式</a></li>
+        <li><a class="section-link" href="#23-设置其他颜色">2.3 设置其他颜色</a></li>
+       </ul></li> 
+      <li class="chapter " data-level="1" data-path="newssdk-ui/index.html"> <a href="#3-tipstoast提示"> <i class="fa fa-check"></i> 3 toast(tips)提示 </a> </li> 
+      <li>
+       <ul class="children">
+        <li><a class="section-link" href="#31-使用演示">3.1 使用演示</a></li>
+        <li><a class="section-link" href="#32-使用方式">3.2 使用方式</a></li>
+        <li><a class="section-link" href="#33-参数设置">3.3 参数设置</a></li>
+       </ul></li> 
+      <li class="chapter " data-level="1" data-path="newssdk-ui/index.html"> <a href="#4-dialog对话框"> <i class="fa fa-check"></i> 4 dialog对话框 </a> </li> 
+      <li>
+       <ul class="children">
+        <li><a class="section-link" href="#41--使用演示">4.1 使用演示</a></li>
+        <li><a class="section-link" href="#42--使用方式">4.2 使用方式</a></li>
+        <li><a class="section-link" href="#43--参数设置">4.3 参数设置</a></li>
+       </ul></li> 
+      <li class="chapter " data-level="1" data-path="newssdk-ui/index.html"> <a href="#5-progress进度条"> <i class="fa fa-check"></i> 5 progress进度条 </a> </li> 
+      <li>
+       <ul class="children">
+        <li><a class="section-link" href="#51--使用演示">5.1 使用演示</a></li>
+        <li><a class="section-link" href="#52--使用方式">5.2 使用方式</a></li>
+        <li><a class="section-link" href="#53--参数设置">5.3 参数设置</a></li>
+       </ul></li> 
+     </ul> 
+    </nav> 
+   </div> 
+   <div class="book-body"> 
+    <div class="body-inner"> 
+     <div class="page-wrapper" tabindex="-1" role="main"> 
+      <div class="page-inner"> 
+       <section class="normal" id="section-"> 
+        <h1 id="newssdkui-"><strong> newsSdk-UI </strong></h1> 
+        <blockquote> 
+         <h1 id="1-整体规则">1 整体规则</h1> 
+        </blockquote> 
+        <!-- ## 1.1  SCSS --> 
+        <!-- ```CSS --> 
+        <h2 id="11-常用class命名定义">1.1 常用class命名定义</h2> 
+        <h5 id="全局设置">全局设置</h5> 
+        <p>大号字体:<code>.ui-font-lg</code><br />中号字体:<code>.ui-font-md</code><br />小号字体:<code>.ui-font-li</code><br />夜间模式:<code>.ui-night</code><br />无图模式:<code>.ui-nopic</code></p> 
+        <h5 id="工具类">工具类</h5> 
+        <p>清除浮动:<code>.ui-cf</code><br />左浮动:<code>.ui-fl</code><br />右浮动:<code>.ui-fr</code><br />强制显示:<code>.ui-show</code><br />强制隐藏:<code>.ui-hide</code><br />单行截断:<code>.ui-text-truncate</code><br />
+         <!-- 
+.ui-loader
+页面下拉加载更多:`.ui-loader-two`  --> 
+         <!-- ``` --></p> 
+        <h2 id="12--mixin意义">1.2 Mixin意义</h2> 
+        <pre><code class="lang-SCSS"><span class="hljs-at_rule">@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> clearfix</span> // 清除浮动
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> text-overflow</span> // 单行截断
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> line-clamp</span>(<span class="hljs-variable">$lines</span>:<span class="hljs-preprocessor"> 2</span>, <span class="hljs-variable">$line-height</span>:<span class="hljs-preprocessor"> 1.3em</span>) // 多行截断
+@<span class="hljs-keyword">mixin</span><span class="hljs-preprocessor"> borders</span>(<span class="hljs-variable">$border-color</span>: <span class="hljs-hexcolor">#e0e0e0</span>) //<span class="hljs-preprocessor"> 1px</span>边框
+</span></code></pre> 
+        <h2 id="13--variables">1.3 Variables</h2> 
+        <pre><code class="lang-scss"><span class="hljs-variable">$namespace</span><span class="hljs-value">:       ui- !default;</span>
+<span class="hljs-variable">$ui-dialog</span><span class="hljs-value">:       #{<span class="hljs-variable">$namespace</span>}dialog !default;</span>
+<span class="hljs-variable">$ui-progress</span><span class="hljs-value">:     #{<span class="hljs-variable">$namespace</span>}progress  !default;</span>
+<span class="hljs-variable">$ui-border</span><span class="hljs-value">:       #{<span class="hljs-variable">$namespace</span>}border !default;</span>
+<span class="hljs-variable">$ui-icon</span><span class="hljs-value">:         #{<span class="hljs-variable">$namespace</span>}icon !default;</span>
+<span class="hljs-variable">$ui-poptips</span><span class="hljs-value">:      #{<span class="hljs-variable">$namespace</span>}poptips !default;</span>
+</code></pre> 
+        <hr /> 
+        <blockquote> 
+         <h1 id="2-1px问题">2 1px问题</h1> 
+        </blockquote> 
+        <h2 id="21-使用演示">2.1 使用演示</h2> 
+        <pre><code class="lang-html">  <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-list-text border-list&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-t&quot;</span>&gt;</span>上边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border&quot;</span>&gt;</span>边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-b&quot;</span>&gt;</span>下边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-tb&quot;</span>&gt;</span>上下边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-l&quot;</span>&gt;</span>左边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-r&quot;</span>&gt;</span>右边框<span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-radius&quot;</span>&gt;</span>
+          圆角边框
+      <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+</code></pre> 
+        <h2 id="22-使用方式">2.2 使用方式</h2> 
+        <h4 id="约定缩写">约定缩写</h4> 
+        <table> 
+         <thead> 
+          <tr> 
+           <th>缩写</th> 
+           <th style="text-align:center">原单词</th> 
+          </tr> 
+         </thead> 
+         <tbody> 
+          <tr> 
+           <td>-l</td> 
+           <td style="text-align:center">left</td> 
+          </tr> 
+          <tr> 
+           <td>-r</td> 
+           <td style="text-align:center">right</td> 
+          </tr> 
+          <tr> 
+           <td>-t</td> 
+           <td style="text-align:center">top</td> 
+          </tr> 
+          <tr> 
+           <td>-b</td> 
+           <td style="text-align:center">bottom</td> 
+          </tr> 
+          <tr> 
+           <td>-tb</td> 
+           <td style="text-align:center">top and bottom</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p><code>$ui-border: #{$namespace}border !default;</code></p> 
+        <p>按照约定的缩写在DOM上相应位置写上对应的class名即可。</p> 
+        <h2 id="23-设置其他颜色">2.3 设置其他颜色</h2> 
+        <p>scss调用：<code>@include border(#variable-color)</code></p> 
+        <p>在scss文件中，相应DOM对应的选择器中，直接调用<code>border(#variable-color)</code>即可。</p> 
+        <h4 id="配置说明：">配置说明：</h4> 
+        <table> 
+         <tbody> 
+          <tr> 
+           <th>name</th> 
+           <th>type</th> 
+           <th>default</th> 
+           <th>description</th> 
+           <th>comments</th> 
+          </tr> 
+          <tr> 
+           <td>color</td> 
+           <td>string</td> 
+           <td>#e0e0e0</td> 
+           <td>颜色值</td> 
+           <td>直接传入颜色值即可，也可以用色值rgb表示</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <h5 id="举例说明：">举例说明：</h5> 
+        <p>HTML相应DOM</p> 
+        <pre><code class="lang-html">  ...
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-new&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-tb &quot;</span>&gt;</span>红色上下边框<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  ...
+</code></pre> 
+        <p>scss调用方式</p> 
+        <pre><code class="lang-scss">  ...
+  <span class="hljs-class">.ui-new</span> {                  <span class="hljs-comment">// 外层类名定位</span>
+    <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> border</span>(<span class="hljs-hexcolor">#f00</span>);</span> <span class="hljs-comment">// 使用实际颜色值:`#f00`</span>
+  }
+  ...
+</code></pre> 
+        <hr /> 
+        <blockquote> 
+         <h1 id="3-tipstoast提示">3 toast(tips)提示</h1> 
+        </blockquote> 
+        <h2 id="31-使用演示">3.1 使用演示</h2> 
+        <!-- top tips --> 
+        <p>示例代码：</p> 
+        <pre><code>  &lt;div class=&quot;ui-center&quot;&gt;
+      &lt;div class=&quot;ui-btn&quot; id=&quot;btn1&quot;&gt;弹出提示&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    var el,
+      options = {
+            content:'温馨提示内容',
+            stayTime:2000,
+            type:&quot;success&quot;
+        };
+    $(&quot;#btn1&quot;).tap(function(){
+        el=$.tips(options);
+        el.on(&quot;tips:hide&quot;,function(){
+            console.log(&quot;tips hide&quot;);
+        })
+    });
+  &lt;/script&gt;
+</code></pre>
+        <h2 id="32-使用方式">3.2 使用方式</h2> 
+        <pre><code>  tips支持两种不同的调用方式，一般使用$.tips(options)即可。
+
+  //最简单的方式，组件会根据默认模板输出dom结构
+  $.tips(options);
+
+  //通过传入css选择器的方式
+  $(&quot;#id&quot;).tips(options);
+</code></pre>
+        <h2 id="33-参数设置">3.3 参数设置</h2> 
+        <h5 id="配置说明">配置说明</h5> 
+        <table> 
+         <tbody> 
+          <tr> 
+           <th>name</th> 
+           <th>type</th> 
+           <th>default</th> 
+           <th>description</th> 
+          </tr> 
+          <tr> 
+           <td>content</td> 
+           <td>string</td> 
+           <td>'操作成功'</td> 
+           <td>提示内容，用来填充模板</td> 
+          </tr> 
+          <tr> 
+           <td>stayTime</td> 
+           <td>int</td> 
+           <td>1000</td> 
+           <td>提示停留时间，过了这个时间自动隐藏，设置0则不自动隐藏</td> 
+          </tr> 
+          <tr> 
+           <td>type</td> 
+           <td>string</td> 
+           <td>'info'</td> 
+           <td>提示类型，可选info|warn|success</td> 
+          </tr> 
+          <tr> 
+           <td>eventBind</td> 
+           <td>string</td> 
+           <td>'click'</td> 
+           <td>事件绑定类型，可选click|tap</td> 
+          </tr> 
+          <tr> 
+           <td>position</td> 
+           <td>string</td> 
+           <td>'middle'</td> 
+           <td>弹出提示位置，可选top|middle，top对应在顶部下拉后收起，middle对应在屏幕中间弹出后隐藏</td> 
+          </tr> 
+          <tr> 
+           <td>callback</td> 
+           <td>funtion</td> 
+           <td>function(){}</td> 
+           <td>回调函数</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>js示例：</p> 
+        <pre><code class="lang-js">  <span class="hljs-keyword">var</span> el,
+    tipsOption = {
+      content: <span class="hljs-string">'操作成功'</span>, <span class="hljs-comment">//弹出内容</span>
+      stayTime: <span class="hljs-number">2000</span>, <span class="hljs-comment">//弹出时间 ms</span>
+      type: <span class="hljs-string">'success'</span>, <span class="hljs-comment">//弹出类型</span>
+      eventBind: <span class="hljs-string">'click'</span>, <span class="hljs-comment">//绑定类型click | tap </span>
+      position: <span class="hljs-string">'middle'</span> <span class="hljs-comment">// top【顶部下拉收起】 |  middle 【中间显示再隐藏】</span>
+    };
+  $(<span class="hljs-string">'#btn-tips'</span>).on(tipsOption.eventBind, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ <span class="hljs-comment">//该id与html中触发的dom对象相对应</span>
+    el = $.tips(tipsOption); <span class="hljs-comment">//点击后，初始化模块</span>
+    el.on(<span class="hljs-string">'tips:hide'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'tips hide'</span>);
+    })
+  });
+</code></pre> 
+        <hr /> 
+        <blockquote> 
+         <h1 id="4-dialog对话框">4 dialog对话框</h1> 
+        </blockquote> 
+        <h2 id="41--使用演示">4.1 使用演示</h2> 
+        <p>示例代码：</p> 
+        <pre><code>  &lt;div class=&quot;ui-center&quot;&gt;
+      &lt;div class=&quot;ui-btn&quot; id=&quot;btn1&quot;&gt;模板创建弹窗&lt;/div&gt;
+      &lt;div class=&quot;ui-btn&quot; id=&quot;btn2&quot;&gt;DOM创建弹窗&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ui-dialog&quot;&gt;
+      &lt;div class=&quot;ui-dialog-cnt&quot;&gt;
+          &lt;div class=&quot;ui-dialog-bd&quot;&gt;
+              &lt;div&gt;
+              &lt;h4&gt;标题&lt;/h4&gt;
+              &lt;div&gt;内容&lt;/div&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;ui-dialog-ft ui-btn-group&quot;&gt;
+              &lt;button type=&quot;button&quot; data-role=&quot;button&quot;  class=&quot;select&quot; id=&quot;dialogButton&lt;%=i%&gt;&quot;&gt;关闭&lt;/button&gt; 
+          &lt;/div&gt;
+      &lt;/div&gt;        
+  &lt;/div&gt;
+
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  $(&quot;#btn1&quot;).tap(function(){
+      var dia=$.dialog({
+          title:'温馨提示',
+          content:'温馨提示内容',
+          button:[&quot;确认&quot;,&quot;取消&quot;]
+      });
+
+      dia.on(&quot;dialog:action&quot;,function(e){
+          console.log(e.index)
+      });
+      dia.on(&quot;dialog:hide&quot;,function(e){
+          console.log(&quot;dialog hide&quot;)
+      });
+
+  })
+  $(&quot;#btn2&quot;).tap(function(){
+      var dia2=$(&quot;.ui-dialog&quot;).dialog(&quot;show&quot;);
+      dia2.on(&quot;dialog:action&quot;,function(e){
+          console.log(e.index)
+      });
+  })
+  &lt;/script&gt;
+</code></pre>
+        <h2 id="42--使用方式">4.2 使用方式</h2> 
+        <pre><code>  dialog支持两种不同的调用方式，一般使用$.dialog(options)即可，不同的方式配置options后都会直接toggle弹窗。
+
+  //最简单的方式，组件会根据默认模板输出dom结构
+  $.dialog(options);
+
+  //通过传入css选择器的方式
+  $(&quot;#id&quot;).dialog(options);
+</code></pre>
+        <h2 id="43--参数设置">4.3 参数设置</h2> 
+        <h5 id="配置说明">配置说明</h5> 
+        <table> 
+         <tbody> 
+          <tr> 
+           <th>name</th> 
+           <th>type</th> 
+           <th>default</th> 
+           <th>description</th> 
+          </tr> 
+          <tr> 
+           <td>title</td> 
+           <td>string</td> 
+           <td>''</td> 
+           <td>浮层标题，用来填充模板</td> 
+          </tr> 
+          <tr> 
+           <td>content</td> 
+           <td>string</td> 
+           <td>''</td> 
+           <td>浮层内容，用来填充模板</td> 
+          </tr> 
+          <tr> 
+           <td>button</td> 
+           <td>array</td> 
+           <td>['确认']</td> 
+           <td>浮层底部按钮的文字数组，建议不超过两个，与callback的index相互对应</td> 
+          </tr> 
+          <tr> 
+           <td>select</td> 
+           <td>int</td> 
+           <td>0</td> 
+           <td>需要高亮的按钮索引（与button相互对应），高亮的按钮会添加类名<code>select</code></td> 
+          </tr> 
+          <tr> 
+           <td>eventBind</td> 
+           <td>string</td> 
+           <td>'click'</td> 
+           <td>事件绑定类型，可选click|tap</td> 
+          </tr> 
+          <tr> 
+           <td>type</td> 
+           <td>number</td> 
+           <td>1</td> 
+           <td>弹出对话框类型，可选0|1，0指只有确认按钮操作，1则有确认和取消两个按钮操作</td> 
+          </tr> 
+          <tr> 
+           <td>callback</td> 
+           <td>funtion</td> 
+           <td>function(){}</td> 
+           <td>点击底部按钮后的回调函数，可以通过函数的第一个参数来获取点击的按钮索引操作（与button对应）</td> 
+          </tr> 
+          <tr> 
+           <td>animation</td> 
+           <td>string</td> 
+           <td>'pop'</td> 
+           <td>弹窗弹出的动画类名，会自动为弹窗外层加上该类名</td> 
+          </tr> 
+          <tr> 
+           <td>end</td> 
+           <td>function</td> 
+           <td>function(){}</td> 
+           <td>弹窗弹出后或者消失后的回调，可以通过函数第一个参数来获取状态（'show'为弹出后，'hide'为消失后）</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <p>js使用示例：</p> 
+        <pre><code class="lang-js">  <span class="hljs-comment">//单个按钮dialog</span>
+  <span class="hljs-keyword">var</span> options1 = {
+    title: <span class="hljs-string">'温馨提示'</span>, <span class="hljs-comment">//title</span>
+    content: <span class="hljs-string">'温馨提示内容:anywhere you are, I am near'</span>, <span class="hljs-comment">//the topic main content</span>
+    button: [<span class="hljs-string">'确认1'</span>, <span class="hljs-string">'取消1'</span>], <span class="hljs-comment">//the button name //</span>
+    eventBind: <span class="hljs-string">'click'</span>, <span class="hljs-comment">//tap | click</span>
+    type: <span class="hljs-number">0</span>  <span class="hljs-comment">//dialog类型</span>
+  }
+  $(<span class="hljs-string">'#btn1'</span>).on(options1.eventBind, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> dia2 = $.dialog(options1); <span class="hljs-comment">//'show'模板弹出时自动为顶级加上show类名，隐藏时自动去掉show，所以一般需要通过show类名来控制模板的显示隐藏。</span>
+    dia2.on(<span class="hljs-string">'dialog:action'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+      <span class="hljs-built_in">console</span>.log(e.index);
+      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'function-- close'</span>)
+    });
+  })
+
+  <span class="hljs-comment">//两个按钮dialog</span>
+  <span class="hljs-keyword">var</span> options2 = {
+    title: <span class="hljs-string">'温馨提示'</span>, <span class="hljs-comment">//title</span>
+    content: <span class="hljs-string">'温馨提示内容 When you need me more'</span>, <span class="hljs-comment">//the topic main content</span>
+    button: [<span class="hljs-string">'确认2'</span>, <span class="hljs-string">'取消2'</span>], <span class="hljs-comment">//the button name 若type为2只能两个参数，若超过两个参数，则不展示多余参数</span>
+    eventBind: <span class="hljs-string">'tap'</span>, <span class="hljs-comment">//tap | click</span>
+    type: <span class="hljs-number">1</span>
+  }
+  $(<span class="hljs-string">'#btn2'</span>).on(options2.eventBind, () =&gt; {
+      <span class="hljs-built_in">console</span>.info(<span class="hljs-string">'dialog---&gt;go'</span>)
+      <span class="hljs-keyword">var</span> dia = $.dialog(options2);
+
+      dia.on(<span class="hljs-string">'dialog:action'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(e.index);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'function go--'</span>)
+      });
+      dia.on(<span class="hljs-string">'dialog:hide'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'dialog hide'</span>)
+      });
+    })
+</code></pre> 
+        <hr /> 
+        <blockquote> 
+         <h1 id="5-progress进度条">5 progress进度条</h1> 
+        </blockquote> 
+        <h2 id="51--使用演示">5.1 使用演示</h2> 
+        <p>示例代码：</p> 
+        <pre><code>  &lt;div class=&quot;ui-progress&quot;&gt;
+      &lt;span style=&quot;width:50%&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+</code></pre>
+        <h2 id="52--使用方式">5.2 使用方式</h2> 
+        <pre><code>  直接添加DOM代码区块即可。
+</code></pre>
+        <h2 id="53--参数设置">5.3 参数设置</h2> 
+        <h4 id="配置说明">配置说明</h4> 
+        <table> 
+         <tbody> 
+          <tr> 
+           <th>name</th> 
+           <th>type</th> 
+           <th>default</th> 
+           <th>description</th> 
+           <th>comments</th> 
+          </tr> 
+          <tr> 
+           <td>style</td> 
+           <td>string</td> 
+           <td>'width: 50%'</td> 
+           <td>浮层标题，用来填充模板</td> 
+           <td>style中的width百分比</td> 
+          </tr> 
+          <tr> 
+           <td>color</td> 
+           <td>string</td> 
+           <td>#e0e0e0</td> 
+           <td>颜色值</td> 
+           <td>直接传入颜色值即可，也可以用色值rgb表示</td> 
+          </tr> 
+         </tbody> 
+        </table> 
+        <h5 id="举例说明：">举例说明：</h5> 
+        <p>HTML相应DOM</p> 
+        <pre><code class="lang-html">  ...
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-new&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;ui-border-tb &quot;</span>&gt;</span>红色上下边框<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+  ...
+</code></pre> 
+        <p>scss调用方式</p> 
+        <pre><code class="lang-scss">  <span class="hljs-class">.ui-new</span> {                  <span class="hljs-comment">// 外层类名定位</span>
+    <span class="hljs-at_rule">@<span class="hljs-keyword">include</span><span class="hljs-preprocessor"> border</span>(<span class="hljs-hexcolor">#f00</span>);</span> <span class="hljs-comment">// 使用实际颜色值:`#f00`</span>
+  }
+</code></pre> 
+       </section> 
+      </div> 
+     </div> 
+    </div> 
+    <!-- <a href="./newssdk-ui/index.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 教你使用赏心悦目的Atom编辑器"><i class="fa fa-angle-right"></i></a>  -->
+   </div> 
+  </div> 
+  <script src="gitbook/app.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-github/plugin.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-search/search.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script> 
+  <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script> 
+  <script>
+require(["gitbook"], function(gitbook) {
+    var config = {"github":{"url":"https://github.com/GuoYongfeng"},"disqus":{"shortName":"gitbookuse","useIdentifier":false},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"sitemap":{"hostname":"http://guoyongfeng.github.io/idoc/"},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>   
+ </body>
 </html>
