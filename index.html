@@ -22,11 +22,13 @@
  --> 
  </head> 
  <body> 
+
   <div class="book" data-level="0" data-chapter-title="介绍" data-filepath="README.md" data-basepath="." data-revision="Thu Jan 05 2017 15:10:30 GMT+0800 (CST)" data-innerlanguage=""> 
+    <div class="tips">点击可以继续查看</div>
    <div class="book-header" role="navigation"> 
     <!-- Actions Left --> 
     <!-- Title --> 
-    <h1> <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./">教你使用 newssdk-UI</a> </h1> 
+    <h1> <i class="fa fa-circle-o-notch fa-spin"></i> <a href="./">newsSdk-UI的使用</a> </h1> 
    </div> 
    <div class="book-summary"> 
     <nav role="navigation"> 
@@ -520,10 +522,20 @@
   <script src="gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script> 
   <script src="gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script> 
   <script>
-require(["gitbook"], function(gitbook) {
-    var config = {"github":{"url":"https://github.com/GuoYongfeng"},"disqus":{"shortName":"gitbookuse","useIdentifier":false},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"sitemap":{"hostname":"http://guoyongfeng.github.io/idoc/"},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
-    gitbook.start(config);
-});
+    require(["gitbook"], function(gitbook) {
+        var config = {"github":{"url":"https://github.com/GuoYongfeng"},"disqus":{"shortName":"gitbookuse","useIdentifier":false},"sharing":{"weibo":true,"twitter":false,"facebook":false,"google":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"sitemap":{"hostname":"http://guoyongfeng.github.io/idoc/"},"highlight":{},"search":{"maxIndexSize":1000000},"fontsettings":{"theme":"white","family":"sans","size":2}};
+        gitbook.start(config);
+    });
+    onresize=function(e){
+      var browserWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      if (browserWidth < 768) {
+        var $tips = $('.tips');
+        $tips.fadeIn();
+        setTimeout(function() {
+          $tips.fadeOut();
+        }, 2000);
+      }
+    };
 </script>   
  </body>
 </html>

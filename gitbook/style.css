@@ -2245,21 +2245,22 @@ table {
 }
 
 .book .book-header h1 {
-	margin: 0;
+	margin: 0 auto;
 	font-size: 20px;
 	font-weight: 200;
 	text-align: center;
 	line-height: 50px;
-	opacity: 0;
-	padding-left: 200px;
-	padding-right: 200px;
+	/*opacity: 0;*/
+	/*padding-left: 200px;*/
+	/*padding-right: 200px;*/
 	-webkit-transition: opacity .2s ease;
 	-moz-transition: opacity .2s ease;
 	-o-transition: opacity .2s ease;
 	transition: opacity .2s ease;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap
+	white-space: nowrap;
+	/*position: fixed;*/
 }
 
 .book .book-header h1 a,.book .book-header h1 a:hover {
@@ -2267,12 +2268,32 @@ table {
 	text-decoration: none
 }
 
-@media (max-width:1000px) {
+/*@media (max-width:1000px) {
 	.book .book-header h1 {
 		display: none
 	}
+}*/
+.tips {
+    position: fixed;
+    z-index: 100;
+    color: #0990ff;
+    font-weight: bold;
+    top: 40px;
+    left: 14px;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 3px;
+    display: none;
 }
-
+.tips:before{
+	content: '';
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f1f1f1;
+    position: absolute;
+    top: -9px;
+    left: 6px;
+}
 .book .book-header h1 i {
 	display: none
 }
