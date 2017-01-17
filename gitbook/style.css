@@ -31,7 +31,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 audio,canvas,video {
 	display: inline-block
 }
-
+.ui-fr{
+	float: right;
+}
 .hidden,[hidden] {
 	display: none
 }

@@ -649,8 +649,15 @@ ul li {
 .demo-block .ui-progress span {
   display: block;
   width: 0%;
-  background: #0ff;
+  /*background: #0ff;*/
   height: 100%;
   font-size: 0; }
-
+.ui-center {
+  text-align: center;
+}
+section#progress {
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
+}
 /*# sourceMappingURL=demo.css.map */
